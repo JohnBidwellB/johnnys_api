@@ -37,6 +37,8 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "Johnny's api" });
 });
 
+require("./routes/auth.routes")(app);
+
 // Set port y listen
 const PORT = process.env.PORT || 3010;
 app.listen(PORT, () => {
